@@ -1,0 +1,33 @@
+<html><head><title>PHP Test</title></head>
+<body>
+PHP - MySQL DB Test<br><br><br>
+<?php
+include_once("dbconnect.inc.php");
+
+$mysqli = new mysqli($host, $user, $password, $database);
+
+if (mysqli_connect_errno()) 
+{
+	printf("Connect failed: %s\n", mysqli_connect_error());
+	exit();
+}
+
+
+ /* retrieve */
+ $query = "select * from TableNameMetadata";
+ $result = $mysqli->query($query) or die($mysqli->error.__LINE__);
+
+ if($result->num_rows > 0) 
+ {
+	while($row = $result->fetch_row()) 
+	{
+         	print "$row[0] $row[1]";
+	}
+ }
+ else 
+	echo 'NO RESULTS';	
+
+
+ mysqli_close($mysqli);
+?>
+</body></html>

@@ -1,0 +1,15 @@
+The pupose of this project is to let users create SQL statements through Graphical User Interface
+and display the results of the same. I did this project as part of my Database Management Systems
+Design course at Clemson University.
+
+At the backend I have used Northwind Database. The schema for that database has been encoded 
+into metadata. Whenever user selects more than one table, this metadata will be used to
+determine the relation between a pair of tables and the application will output a SQL statement
+accordingly.
+
+I have used JavaScript DOM Scripting, PHP, MySQL for writing this application.
+
+A working demo of this app can be found at http://people.cs.clemson.edu/~sourimd/CPSC862/Ass7/
+
+PS- On the LHS under Datasets column you will find a list of table names. Those names are
+clickable. Once you click on them attributes of that table will appear in the next column.  
